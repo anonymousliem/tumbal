@@ -1,0 +1,32 @@
+[
+    {
+        "pse job name": "blt-content-gqlcontetslot-search",
+        "name resource": "channel-nsqd",
+        "Problem": "nsqd ga standar"
+    },
+    {
+        "pse job name": "blt-content-gqlcontetslot-search",
+        "name resource": "broadcaster-redis",
+        "Problem": "redis sentinel"
+    },
+    {
+        "pse job name": "blt-content-rilisanspesial-run",
+        "name resource": "channel-nsqd",
+        "Problem": "nsqd ga standar"
+    },
+    {
+        "pse job name": "blt-content-rilisanspesial-run",
+        "name resource": "category-nsqd",
+        "Problem": "nsqd jadul"
+    },
+    {
+        "pse job name": "blt-content-rilisanspesial-run",
+        "name resource": "play-redis",
+        "Problem": "cluster non proxy"
+    },
+    {
+        "pse job name": "blt-content-rilisanspesial-run",
+        "name resource": "broadcaster-redis",
+        "Problem": "redis stand alone"
+    }
+]
