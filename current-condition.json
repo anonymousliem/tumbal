@@ -1,126 +1,132 @@
 {
-	"pse_spec": [{
-			"pse_job_name": "blt-content-gqlcontetslot-search",
-			"spec": {
-				"nsqd": [{
-						"skipped": true,
-						"hostgroup": "channel-nsqd"
-					},
-					{
-						"skipped": false,
-						"hostgroup": "category-nsqd"
-					}
-				],
-				"redis": [{
-						"skipped": false,
-						"hostgroup": "broadcaster-redis"
-					},
-					{
-						"skipped": true,
-						"hostgroup": "broadcaster-report-redis"
-					}
-				],
-                "other": [
-                    {
-                      "problem": "milvus - unsupported - gcp",
-                      "priority": 1,
-                      "hostgroup": "search-milvus-write-mysql",
-                      "depends_on": []
-                    },
-                    {
-                      "problem": "milvus - unsupported - gcp",
-                      "priority": 1,
-                      "hostgroup": "search-milvus-read",
-                      "depends_on": []
-                    },
-                    {
-                      "problem": "instance non-autoscale",
-                      "priority": 0,
-                      "hostgroup": "jaeger-collector",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "instance non-autoscale",
-                      "priority": 0,
-                      "hostgroup": "r3-product-cluster-grpc",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "instance non-autoscale",
-                      "priority": 0,
-                      "hostgroup": "r3-product-cluster-http",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "not yet agora",
-                      "priority": 0,
-                      "hostgroup": "topads-relevance-ranking-search-nginx",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "not yet agora",
-                      "priority": 0,
-                      "hostgroup": "merlin-hmpf-nginx",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "not yet agora",
-                      "priority": 0,
-                      "hostgroup": "r3-play-es-nginx",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "not yet agora",
-                      "priority": 0,
-                      "hostgroup": "r3-product6-nginx",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "staging only stand-alone, prod different name",
-                      "priority": 0,
-                      "hostgroup": "search-misc-es-stagv7",
-                      "depends_on": null
-                    },
-                    {
-                      "problem": "migrated from search-product6 to search-product7 (name is non-standard, prod is non-standard with 2 data nodes)",
-                      "priority": 0,
-                      "hostgroup": "search-product7-es-dbau",
-                      "depends_on": null
-                    }
-                  ]
-			}
-		},
-		{
-			"pse_job_name": "blt-content-rilisanspesial-run",
-			"spec": {
-				"nsqd": [{
-						"skipped": false,
-						"hostgroup": "channel-nsqd"
-					},
-					{
-						"skipped": true,
-						"hostgroup": "category-nsqd"
-					}
-				],
-				"redis": [{
-						"skipped": false,
-						"hostgroup": "play-redis"
-					},
-					{
-						"skipped": true,
-						"hostgroup": "broadcaster-redis"
-					}
-				],
-				"autoscale": [{
-						"skipped": false,
-						"hostgroup": "play-grpc"
-					},
-					{
-						"skipped": true,
-						"hostgroup": "category"
-					}
-				]
-			}
-		}
-	]
+  "pse_spec": [
+    {
+      "pse_job_name": "blt-content-gqlcontetslot-search",
+      "spec": {
+        "nsqd": [
+          {
+            "skipped": true,
+            "hostgroup": "channel-nsqd"
+          },
+          {
+            "skipped": false,
+            "hostgroup": "category-nsqd"
+          }
+        ],
+        "redis": [
+          {
+            "skipped": false,
+            "hostgroup": "broadcaster-redis"
+          },
+          {
+            "skipped": true,
+            "hostgroup": "broadcaster-report-redis"
+          }
+        ],
+        "other": [
+          {
+            "problem": "milvus - unsupported - gcp",
+            "priority": 1,
+            "hostgroup": "search-milvus-write-mysql",
+            "depends_on": []
+          },
+          {
+            "problem": "milvus - unsupported - gcp",
+            "priority": 1,
+            "hostgroup": "search-milvus-read",
+            "depends_on": []
+          },
+          {
+            "problem": "instance non-autoscale",
+            "priority": 0,
+            "hostgroup": "jaeger-collector",
+            "depends_on": null
+          },
+          {
+            "problem": "instance non-autoscale",
+            "priority": 0,
+            "hostgroup": "r3-product-cluster-grpc",
+            "depends_on": null
+          },
+          {
+            "problem": "instance non-autoscale",
+            "priority": 0,
+            "hostgroup": "r3-product-cluster-http",
+            "depends_on": null
+          },
+          {
+            "problem": "not yet agora",
+            "priority": 0,
+            "hostgroup": "topads-relevance-ranking-search-nginx",
+            "depends_on": null
+          },
+          {
+            "problem": "not yet agora",
+            "priority": 0,
+            "hostgroup": "merlin-hmpf-nginx",
+            "depends_on": null
+          },
+          {
+            "problem": "not yet agora",
+            "priority": 0,
+            "hostgroup": "r3-play-es-nginx",
+            "depends_on": null
+          },
+          {
+            "problem": "not yet agora",
+            "priority": 0,
+            "hostgroup": "r3-product6-nginx",
+            "depends_on": null
+          },
+          {
+            "problem": "staging only stand-alone, prod different name",
+            "priority": 0,
+            "hostgroup": "search-misc-es-stagv7",
+            "depends_on": null
+          },
+          {
+            "problem": "migrated from search-product6 to search-product7 (name is non-standard, prod is non-standard with 2 data nodes)",
+            "priority": 0,
+            "hostgroup": "search-product7-es-dbau",
+            "depends_on": null
+          }
+        ]
+      }
+    },
+    {
+      "pse_job_name": "blt-content-rilisanspesial-run",
+      "spec": {
+        "nsqd": [
+          {
+            "skipped": false,
+            "hostgroup": "channel-nsqd"
+          },
+          {
+            "skipped": true,
+            "hostgroup": "category-nsqd"
+          }
+        ],
+        "redis": [
+          {
+            "skipped": false,
+            "hostgroup": "play-redis"
+          },
+          {
+            "skipped": true,
+            "hostgroup": "broadcaster-redis"
+          }
+        ],
+        "autoscale": [
+          {
+            "skipped": false,
+            "hostgroup": "play-grpc"
+          },
+          {
+            "skipped": true,
+            "hostgroup": "category"
+          }
+        ]
+      }
+    }
+  ]
 }
