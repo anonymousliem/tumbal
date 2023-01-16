@@ -1,118 +1,33 @@
 {
-    "pse_spec": [
-        {
-            "pse_job_name": "blt-stitch-notif-run",
-            "spec": {
-                "nsqd": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ],
-                "redis": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ],
-                "scylla": null,
-                "stubby": null,
-                "postgres": null,
-                "autoscale": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ]
-            },
-            "pse_job_id": 106
-        },
-        {
-            "pse_job_name": "blt-topads-gql-bannerads-search-ht4",
-            "spec": {
-                "nsqd": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ],
-                "redis": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ],
-                "autoscale": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    },
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ],
-                "elastic_search": [
-                    {
-                        "hostgroup": "broadcaster-redis",
-                        "problem": "",
-                        "notes": ""
-                    }
-                ]
-            },
-            "pse_job_id": 156
-        }
-    ]
+	"pse_spec": [{
+			"pse job name": "blt-content-gqlcontetslot-search",
+			"resource": [{
+					"name resource": "channel-nsqd",
+					"problem": "xxxx",
+					"notes": "yyyy"
+				},
+				{
+					"name resource": "channel-nsqd",
+					"problem": "xxxx",
+					"notes": "aaaa"
+				}
+			]
+
+		},
+		{
+			"pse job name": "blt-content-gqlcontetslot-search",
+			"resource": [{
+					"name resource": "channel-nsqd",
+					"problem": "",
+					"notes": ""
+				},
+				{
+					"name resource": "channel-nsqd",
+					"problem": "",
+					"notes": ""
+				}
+			]
+
+		}
+	]
 }
