@@ -1,33 +1,47 @@
-{
-	"pse_spec": [{
-			"pse job name": "blt-content-gqlcontetslot-search",
-			"resource": [{
-					"name resource": "channel-nsqd",
-					"problem": "xxxx",
-					"notes": "yyyy"
-				},
-				{
-					"name resource": "channel-nsqd",
-					"problem": "xxxx",
-					"notes": "aaaa"
-				}
-			]
-
-		},
-		{
-			"pse job name": "blt-content-gqlcontetslot-search",
-			"resource": [{
-					"name resource": "channel-nsqd",
-					"problem": "",
-					"notes": ""
-				},
-				{
-					"name resource": "channel-nsqd",
-					"problem": "",
-					"notes": ""
-				}
-			]
-
-		}
-	]
-}
+[
+	{
+		"pse job name": "muslim-1",
+		"resource": [
+			{
+				"name resource": "channel-nsqd",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "broadcaster1-redis",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			}
+		]
+	},
+	{
+		"pse job name": "muslim-2",
+		"resource": [
+			{
+				"name resource": "channel3-nsqd",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "broadcaster3-redis",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "testapp-postgres",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "testapp",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "testapp-cassandra",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			}
+		]
+	}
+]
