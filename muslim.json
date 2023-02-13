@@ -1,0 +1,69 @@
+[
+	{
+        "pse job name": "muslim-1",
+        "resource": [
+            {
+                "name resource": "search-nsqd",
+                "problem": "",
+                "notes": "",
+                "type": "",
+                "depends_on": [
+                    "aaa",
+                    "bbb",
+                    "cccc"
+                ]
+            },
+            {
+                "name resource": "udc-nsqd",
+                "problem": "",
+                "notes": "",
+                "type": "",
+                "depends_on": []
+            },
+            {
+                "name resource": "restriction-engine-nsqd",
+                "problem": "",
+                "notes": "",
+                "type": "",
+                "depends_on": []
+            },
+            {
+                "name resource": "topads-nsqd",
+                "problem": "",
+                "notes": "",
+                "type": "",
+                "depends_on": []
+            }
+        ]
+    },
+	{
+		"pse job name": "muslim-2",
+		"resource": [
+			{
+				"name resource": "channel3-nsqd",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "broadcaster3-redis",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "testapp-postgres",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "testapp",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			},
+			{
+				"name resource": "testapp-cassandra",
+				"problem": "xxxx",
+				"notes": "yyyy"
+			}
+		]
+	}
+]
