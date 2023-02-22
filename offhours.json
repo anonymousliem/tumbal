@@ -1,0 +1,115 @@
+{
+    "resource_spec": {
+        "scheduler": {
+            "test-upscale": {
+              "time": {
+                "schedule": "5 10 * * *",
+                "timezone": "Asia/Jakarta",
+                "duration_sec": 30600
+              },
+              "enabled": true,
+              "min_value": 1,
+              "description": "test upscale"
+            }
+          },
+        "network_config": {
+            "mesh": {
+                "hostgroup": "",
+                "mesh_name": ""
+            },
+            "healthcheck": {
+                "healthcheck_tcp": {
+                    "port": 0,
+                    "enabled": false,
+                    "timeout": 0,
+                    "interval": 0,
+                    "threshold": 0,
+                    "unhealthy_threshold": 0
+                },
+                "healthcheck_http": {
+                    "host": "",
+                    "path": "/manifest.json",
+                    "port": 80,
+                    "enabled": true,
+                    "timeout": 5,
+                    "interval": 5,
+                    "threshold": 2,
+                    "unhealthy_threshold": 2
+                },
+                "healthcheck_initial_delay": 300
+            },
+            "named_ports": [{
+                "name": "http",
+                "port": 80
+            }]
+        },
+        "scaling_policy": {
+            "max_surge": 20,
+            "preemptible": false,
+            "max_replicas": 1,
+            "min_replicas": 1,
+            "cooldown_period": 0,
+            "max_unavailable": 0,
+            "scaling_metrics": {
+                "lbs": null,
+                "cpus": [{
+                    "method": "",
+                    "target": 0.6
+                }],
+                "metrics": null
+            },
+            "update_policies": {
+                "policy_type": "PROACTIVE",
+                "min_ready_sec": 150,
+                "minimal_action": "REPLACE",
+                "redistribution_type": "PROACTIVE"
+            },
+            "automatic_restart": false
+        },
+        "instance_config": {
+            "add_on": {
+                "granulate": false
+            },
+            "ansible": {},
+            "disk_size": 20,
+            "instance_spec": [
+                "e2-medium"
+            ],
+            "service_account": "sa-lite-loki-7b6c@tkpd-infra-staging.iam.gserviceaccount.com"
+        }
+    },
+    "policy_spec": {
+        "traffic_based_optimization": {
+            "enabled": false,
+            "min_instance": 3,
+            "max_instance": 5,
+            "cpu_target_utilization": 0.5,
+            "description": "P0 service off hours optimization"
+        },
+        "gradual_optimization": {
+            "enabled": true,
+            "description": "Gradual from 18 to 5 on 6PM to 11PM",
+            "sequence": [{
+                    "schedule": "0 18 * * *",
+                    "timezone": "Asia/Jakarta",
+                    "duration_sec": 14400,
+                    "min_instance": 18,
+                    "max_instance": 20
+                },
+                {
+                    "schedule": "0 18 * * *",
+                    "timezone": "Asia/Jakarta",
+                    "duration_sec": 14400,
+                    "min_instance": 18
+                }
+            ]
+        },
+        "bau_scheduler": {
+            "schedule": "0 18 * * *",
+            "timezone": "Asia/Jakarta",
+            "duration_sec": 14400,
+            "min_instance": 18,
+            "max_instance": 20
+        }
+    }
+}
